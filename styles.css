@@ -1,1 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(90deg, #ff6a88, #ff4b2b);
+    color: white;
+    padding: 15px;
+    font-size: 1.5rem;
+}
+
+button {
+    background: #ff6a88;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+}
+}
+
+button:hover {
+    background: #ff4b2b;
+}
+
+
+nav {
+display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff4b2b;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 2px solid #ff4b2b;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: #ff4b2b;
+    color: white;
+}
+
+.receta {
+    display: none;
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.receta.active {
+    display: block;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode header {
+    background: linear-gradient(90deg, #333, #444);
+}
+
+body.dark-mode button, body.dark-mode a {
+    background-color: #444;
+    color: white;
+}
+
+#siguienteReceta {
+    display: block;
+    margin: 20px auto;
+}
+
+
+body.dark-mode .receta {
+    background: #333; /* O cualquier otro color oscuro */
+    color: white;
+}
 
