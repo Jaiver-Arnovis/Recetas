@@ -27,13 +27,16 @@ async function handleLike(event) {
 
         if (!docSnap.exists()) {
             await setDoc(docRef, { likes: 1 }); // Si no existe, lo crea con 1 like
+            console.log(`Receta ${recetaId} creada con 1 like.`);
         } else {
             await updateDoc(docRef, { likes: increment(1) }); // Si existe, suma 1
+            console.log(`Receta ${recetaId} actualizada. Likes incrementados.`);
         }
 
         // Obtener y mostrar los nuevos likes
         const updatedDoc = await getDoc(docRef);
         document.getElementById(`likes-${recetaId}`).innerText = updatedDoc.data().likes;
+        console.log(`Likes actualizados para la receta ${recetaId}: ${updatedDoc.data().likes}`);
     } catch (error) {
         console.error("Error al actualizar los likes:", error);
     }
@@ -53,5 +56,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const docRef = doc(db, "likes", recetaId);
         const docSnap = await getDoc(docRef);
         span.innerText = docSnap.exists() ? docSnap.data().likes : 0;
+        console.log(`Likes iniciales para la receta ${recetaId}: ${span.innerText}`);
     }
 });
