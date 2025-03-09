@@ -1,20 +1,27 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
 
-// Configuración de Firebase
-const firebaseConfig = {
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
     apiKey: "AIzaSyB5DlW2q4Hw4QvMfwB71CBEGI3i1ZLYiUA",
     authDomain: "likes-bb8fc.firebaseapp.com",
     projectId: "likes-bb8fc",
-    storageBucket: "likes-bb8fc.appspot.com",
+    storageBucket: "likes-bb8fc.firebasestorage.app",
     messagingSenderId: "943357612702",
-    appId: "1:943357612702:web:0ecc2e16a7e2861e30a18f",
-    measurementId: "G-5PT135W0CL"
-};
+    appId: "1:943357612702:web:5742c988e2d796e230a18f",
+    measurementId: "G-76QX7HZPK7"
+  };
 
-// Inicializar Firebase y Firestore
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+
 
 // Función para manejar los "Me gusta"
 async function handleLike(event) {
