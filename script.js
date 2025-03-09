@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     aplicarPreferenciaModoOscuro();
     document.getElementById("toggleMode").addEventListener("click", toggleDarkMode);
-    cargarRecetas('postres.html'); // Cargar "Platos Fuertes" por defecto
+    cargarRecetas('platos_fuertes.html'); // Cargar "Platos Fuertes" por defecto
 });
 
 function cargarRecetas(archivo) {
